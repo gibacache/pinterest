@@ -1,29 +1,32 @@
-<h1>Listing pins</h1>
+<div class="container">
 
-<table>
-  <thead>
-    <tr>
-      <th>Description</th>
-      <th>Photo</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+  <h1>Pins</h1>
 
-  <tbody>
+  <div class="row">
+
     <% @pins.each do |pin| %>
-      <tr>
-        <td><%= pin.description %></td>
-        <td><%= image_tag(pin.photo, :size => "200x200") %></td>
-        <td><%= link_to 'Show', pin %></td>
-        <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
-        <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+
+    <div class="col-xs-8 col-sm-1 col-md-3 col-lg-3">
+      <div class="thumbnail" >
+      <%= image_tag pin.photo, :class => "img-rounded" %>
+        <div class="caption">
+          <p>
+            <%= pin.description %>
+          </p>
+          <p>
+            <%= link_to 'Show', pin, :class => "btn btn-primary" %>
+            <%= link_to 'Edit', edit_pin_path(pin), :class => "btn btn-default" %>
+            <%= link_to 'Destroy', pin, :class => "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
+          </p>
+        </div>
+      </div>
+    </div>
+
     <% end %>
-  </tbody>
-</table>
 
-<br>
+  </div>
 
-<%= link_to 'New Pin', new_pin_path %>
+
+  <br>
+  <%= link_to 'New Pin', new_pin_path %>
+</div>

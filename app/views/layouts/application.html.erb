@@ -5,18 +5,15 @@
 	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
 	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 	<%= csrf_meta_tags %>
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
 </head>
 <body style="padding-top: 51px;">
 	<%= render :partial => 'shared/header' %>
-	<div class="alert alert-success alert-dismissable" style="margin:10px;">
-	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-		<b><%= notice %></b>
-	</div>
-	<p><%= alert %></p>
+	<div><%= notice %></div>
+	<div><%= alert %></div>
 	<%= yield %>
 
 </body>
