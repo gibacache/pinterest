@@ -1,7 +1,12 @@
 <div class="jumbotron" style="background-image:url('http://www.onemonth.cl/assets/home-bg-15138263676a6f1ccde03ca52a29e2a0.jpg'); background-size:100%">
-  <h1>Este es el Index h1</h1>
+  <h1 title="first tooltip">Este es el Index h1</h1>
   <h2>Esto es un subtitulo h2</h2>
   <h3>Esto es un subtitulo h3</h3>
-
-  <p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
+  <p><a class="btn btn-primary btn-lg" role="button" >Learn more</a></p>
+  <p><a class="btn btn-primary btn-lg" data-placement="right" role="button">Learn more</a></p>
 </div>
+
+<script type="text/javascript">
+	$('.btn').tooltip({title:"hola"});
+</script>
+
